@@ -1,20 +1,20 @@
 @font-face {
-  font-family: "Inter";
-  src: url("../fonts/Inter-Regular.woff2") format("woff2");
+  font-family: "Manrope";
+  src: url("../fonts/Manrope/Manrope-VariableFont_wght.woff2") format("woff2 supports variations"),
+       url("../fonts/Manrope/Manrope-VariableFont_wght.woff2") format("woff2-variations");
+  font-weight: 200 700;
+}
+
+@font-face {
+  font-family: "EBGaramond";
+  src: url("../fonts/Garamond/EBGaramond-Regular.woff2") format("woff2");
   font-display: swap;
   font-weight: 400;
 }
 
 @font-face {
-  font-family: "Inter";
-  src: url("../fonts/Inter-Medium.woff2") format("woff2");
+  font-family: "EBGaramond Italic";
+  src: url("../fonts/Garamond/EBGaramond-Italic.woff2") format("woff2");
   font-display: swap;
-  font-weight: 500;
-}
-
-@font-face {
-  font-family: "Inter";
-  src: url("../fonts/Inter-Bold.woff2") format("woff2");
-  font-display: swap;
-  font-weight: 700;
+  font-weight: 400;
 }
