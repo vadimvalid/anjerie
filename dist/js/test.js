@@ -1,0 +1,1 @@
+!function(){var t;!function(t){t.Active="active",t.Inactive="inactive",t.New="new"}(t||(t={}));let e={birthDate:new Date("01-01-2023"),id:1,name:"Attico",status:t.Active};console.log("primaryContact",e)}();

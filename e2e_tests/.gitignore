@@ -1,0 +1,7 @@
+cypress.env.json
+node_modules
+cypress/screenshots
+cypress/snapshots
+cypress/snapshots_diff
+cypress/videos
+tests-outputs
