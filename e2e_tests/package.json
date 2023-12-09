@@ -1,0 +1,18 @@
+{
+  "name": "e2e_tests",
+  "version": "1.0.0",
+  "description": "End-to-End tests",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cypress/skip-test": "^2.6.1",
+    "@faker-js/faker": "^6.1.2",
+    "@simonsmith/cypress-image-snapshot": "^5.0.2",
+    "cypress": "^10.4.0",
+    "cypress-fail-fast": "^3.4.1"
+  }
+}
