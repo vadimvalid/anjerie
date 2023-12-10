@@ -1,0 +1,11 @@
+.info {
+  grid-area: info;
+  display: flex;
+  align-items: center;
+  gap: toRem(20);
+  display: none;
+
+  @include sm-breakpoint {
+    display: flex;
+  }
+}

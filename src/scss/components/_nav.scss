@@ -1,0 +1,14 @@
+.nav {
+  grid-area: nav;
+  display: none;
+
+  > ul {
+    display: flex;
+    align-items: center;
+    gap: toRem(20);
+  }
+
+  @include sm-breakpoint {
+    display: block;
+  }
+}
