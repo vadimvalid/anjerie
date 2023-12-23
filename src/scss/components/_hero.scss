@@ -1,24 +1,93 @@
 .hero {
+  padding: 378px 0 58px;
+  background-color: $black;
+  border-radius: 0px 0px 99px 99px;
+  color: $white;
+  background-image: url("../images/bg-hero.png");
+  background-size: contain;
+  background-position: right top;
+  background-repeat: no-repeat;
+
   h1 {
-    margin-bottom: 30px;
-    color: var(--White, #fff);
-    font-family: EB Garamond;
-    font-size: 64px;
-    font-weight: 400;
+    margin-bottom: 4px;
+    font-size: 42px;
     line-height: normal;
     text-transform: uppercase;
-
-    span {
-      font-style: italic;
-    }
   }
 
   p {
-    color: var(--White, #fff);
-    font-family: Manrope;
-    font-size: 16px;
+    font-size: 14px;
     font-style: normal;
-    font-weight: 400;
     line-height: 160%;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 50px;
+
+    li {
+      a {
+        display: block;
+        padding: 12px 20px 13px;
+        background: $white;
+        color: #000;
+        text-align: center;
+        font-size: 15px;
+        font-weight: 600;
+        line-height: normal;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  @include sm-breakpoint {
+    padding: 110px 0 188px;
+
+    .text {
+      width: 40%;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+      font-size: 64px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+
+    ul {
+      gap: 28px;
+      margin-top: 60px;
+
+      li {
+        position: relative;
+        padding-left: 34px;
+
+        a {
+          display: inline-block;
+          padding: 0;
+          background: transparent;
+          font-weight: 400;
+          color: $white;
+        }
+
+        &:before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 0;
+          width: 20px;
+          height: 11px;
+          background-image: url("../images/icons/arrow.svg");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain;
+          transform: translateY(-50%);
+        }
+      }
+    }
   }
 }
