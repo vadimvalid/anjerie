@@ -1,0 +1,10 @@
+.logo {
+  grid-area: logo;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include sm-breakpoint {
+    justify-content: flex-start;
+  }
+}

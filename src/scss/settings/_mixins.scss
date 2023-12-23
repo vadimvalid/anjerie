@@ -1,4 +1,16 @@
 @function toRem($value) {
-  $remValue: calc($value / 16) + rem; 
+  $remValue: calc($value / 16) + rem;
   @return $remValue;
+}
+
+@mixin sm-breakpoint {
+  @media only screen and (min-width: $smBreakpoint) {
+    @content;
+  }
+}
+
+@mixin md-breakpoint {
+  @media only screen and (min-width: $mdBreakpoint) {
+    @content;
+  }
 }

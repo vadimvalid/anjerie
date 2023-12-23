@@ -1,0 +1,8 @@
+.basket {
+  grid-area: basket;
+  all: unset;
+  display: flex;
+  width: toRem(25);
+  height: toRem(27);
+  cursor: pointer;
+}

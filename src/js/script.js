@@ -1,4 +1,12 @@
-function exampleFunction(a) {
-  return a;
+function toggleBurger() {
+  const burger = document.querySelector(".burger");
+  const menu = document.querySelector(".menu");
+
+  burger.addEventListener("click", () => {
+    burger.classList.toggle("open");
+  });
 }
-console.log(exampleFunction('test'));
+
+if (window.matchMedia("(max-width: 768px)").matches) {
+  toggleBurger();
+}

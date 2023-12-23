@@ -1,0 +1,50 @@
+.burger {
+  grid-area: burger;
+  all: unset;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: toRem(36);
+  height: toRem(24);
+  cursor: pointer;
+
+  > span {
+    width: toRem(36);
+    height: 3px;
+    background-color: $white;
+
+    &:first-child {
+      transform-origin: 12% 0%;
+      transition: transform 0.4s ease-in-out;
+    }
+
+    &:nth-child(2) {
+      transition: transform 0.2s ease-in-out;
+    }
+
+    &:nth-child(3) {
+      transform-origin: 0% 100%;
+      transition: transform 0.4s ease-in-out;
+    }
+  }
+
+  &.open {
+    > span {
+      &:first-child {
+        transform: rotate(45deg);
+      }
+
+      &:nth-child(2) {
+        transform: scaleY(0);
+      }
+
+      &:nth-child(3) {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  @include sm-breakpoint {
+    display: none;
+  }
+}

@@ -1,0 +1,32 @@
+.header {
+  background: $black;
+
+  .wrapper {
+    display: grid;
+    grid-template-areas: "burger logo basket";
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: toRem(20);
+    padding: toRem(30) 0 toRem(25);
+
+    li {
+      > a {
+        font-size: toRem(15);
+        color: $white;
+        text-transform: uppercase;
+      }
+    }
+
+    @include sm-breakpoint {
+      grid-template-areas: "nav logo info basket";
+      grid-template-columns: auto 1fr auto auto;
+    }
+
+    &.open {
+      grid-template-areas:
+        "burger logo basket"
+        "nav nav nav"
+        "info info info";
+    }
+  }
+}

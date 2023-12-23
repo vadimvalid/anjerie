@@ -1,52 +1,57 @@
-const path = require('path');
-const HtmlBundlerPlugin = require('html-bundler-webpack-plugin');
+const path = require("path");
+const HtmlBundlerPlugin = require("html-bundler-webpack-plugin");
 
-const mode = process.env.NODE_ENV || 'development';
-const devMode = mode === 'development';
-const target = devMode ? 'web' : 'browserslist';
-const devtool = devMode ? 'source-map' : undefined;
+const mode = process.env.NODE_ENV || "development";
+const devMode = mode === "development";
+const target = devMode ? "web" : "browserslist";
+const devtool = devMode ? "source-map" : undefined;
 
 module.exports = {
   mode,
   target,
   devtool,
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, "dist"),
     clean: true,
-    assetModuleFilename: 'images/[name][ext]',
+    assetModuleFilename: "images/[name][ext]",
+  },
+  resolve: {
+    alias: {
+      "@images": path.join(__dirname, "src/images"),
+    },
   },
   plugins: [
     new HtmlBundlerPlugin({
-      entry: 'src/',
+      entry: "src/",
       css: {
-        outputPath: path.join(__dirname, 'dist/css/'),
+        outputPath: path.join(__dirname, "dist/css/"),
       },
       js: {
-        outputPath: path.join(__dirname, 'dist/js/'),
+        outputPath: path.join(__dirname, "dist/js/"),
       },
-      preprocessor: 'nunjucks',
+      preprocessor: "nunjucks",
     }),
   ],
   module: {
     rules: [
       {
         test: /\.(c|sa|sc)ss$/i,
-        use: ['css-loader', 'postcss-loader', 'sass-loader'],
+        use: ["css-loader", "postcss-loader", "sass-loader"],
       },
       {
         test: /\.(ttf|woff|woff2|eot)$/i,
-        type: 'asset/resource',
+        type: "asset/resource",
         generator: {
-          filename: 'fonts/[name][ext]',
+          filename: "fonts/[name][ext]",
         },
       },
       {
         test: /\.(jpe?g|png|webp|gif|svg)$/i,
-        type: 'asset/resource',
+        type: "asset/resource",
       },
       {
         test: /\.tsx?$/,
-        use: 'ts-loader',
+        use: "ts-loader",
         exclude: /node_modules/,
       },
     ],
@@ -56,11 +61,11 @@ module.exports = {
     compress: true,
 
     static: {
-      directory: path.join(__dirname, './dist'),
+      directory: path.join(__dirname, "./dist"),
     },
 
     watchFiles: {
-      paths: ['src/**/*.*'],
+      paths: ["src/**/*.*"],
       options: {
         usePolling: true,
       },
