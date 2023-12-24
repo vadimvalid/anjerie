@@ -50,3 +50,13 @@
     }
   }
 }
+
+@mixin sectionTitle {
+  color: $textColor;
+  font-size: 34px;
+  text-transform: uppercase;
+
+  @include sm-breakpoint {
+    font-size: 64px;
+  }
+}
