@@ -14,6 +14,10 @@
         font-size: toRem(15);
         color: $white;
         text-transform: uppercase;
+
+        &:hover {
+          color: $activeColor;
+        }
       }
     }
 

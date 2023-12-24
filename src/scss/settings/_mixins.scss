@@ -47,6 +47,27 @@
       background-repeat: no-repeat;
       background-size: contain;
       transform: translateY(-50%);
+      transition: all 0.3s ease;
+    }
+
+    &:hover {
+      &:before {
+        background-image: url("../images/icons/arrow-active.svg");
+        animation-name: arrowAnimation;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease;
+        animation-fill-mode: forwards;
+      }
+    }
+
+    @keyframes arrowAnimation {
+      0% {
+        transform: translateY(-50%) translateX(0);
+      }
+      100% {
+        transform: translateY(-50%) translateX(4px);
+      }
     }
   }
 }
