@@ -14,9 +14,7 @@
     background: transparent;
 
     > h2 {
-      color: $textColor;
-      font-size: 34px;
-      text-transform: uppercase;
+      @include sectionTitle;
     }
 
     > a {
@@ -56,10 +54,6 @@
     .header {
       justify-content: space-between;
       align-items: center;
-
-      > h2 {
-        font-size: 64px;
-      }
 
       > a {
         display: inline-block;
