@@ -1,0 +1,52 @@
+.items {
+  .item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 0 32px 18px;
+    background: #f8f8f8;
+    font-family: Manrope;
+    font-size: 16px;
+    font-weight: 400;
+    color: $textColor;
+    text-align: center;
+
+    .title {
+      font-size: 19px;
+      line-height: 120%;
+    }
+
+    .desc {
+      color: $textSecondary;
+      line-height: 160%;
+    }
+
+    .price {
+      margin-top: auto;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 160%;
+    }
+
+    @include sm-breakpoint {
+      gap: 16px;
+      padding: 0;
+      background: transparent;
+      text-align: initial;
+
+      > img {
+        padding: 14px 32px 18px;
+        background: #f8f8f8;
+      }
+
+      .title {
+        font-size: 21px;
+      }
+
+      .price {
+        font-size: 24px;
+      }
+    }
+  }
+}

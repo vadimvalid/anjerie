@@ -14,3 +14,39 @@
     @content;
   }
 }
+
+@mixin blockLink {
+  display: block;
+  padding: 12px 20px 13px;
+  background: $white;
+  color: #000;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+
+  @include sm-breakpoint {
+    position: relative;
+    display: inline-block;
+    padding: 0;
+    padding-left: 34px;
+    background: transparent;
+    font-weight: 400;
+    color: $white;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 20px;
+      height: 11px;
+      background-image: url("../images/icons/arrow.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      transform: translateY(-50%);
+    }
+  }
+}
