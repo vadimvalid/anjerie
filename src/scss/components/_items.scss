@@ -1,0 +1,83 @@
+.items {
+  margin-bottom: 80px;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+
+    > h2 {
+      color: $textColor;
+      font-size: 34px;
+      text-transform: uppercase;
+    }
+
+    > a {
+      @include blockLink;
+
+      display: none;
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .buttons {
+    display: flex;
+
+    a {
+      width: 100%;
+      padding: 12px 16px 13px;
+      background-color: $black;
+      font-size: 14px;
+      font-weight: 600;
+      color: $white;
+      text-align: center;
+    }
+  }
+
+  @include sm-breakpoint {
+    margin-bottom: 130px;
+
+    .container {
+      gap: 72px;
+    }
+
+    .header {
+      justify-content: space-between;
+      align-items: center;
+
+      > h2 {
+        font-size: 64px;
+      }
+
+      > a {
+        display: inline-block;
+        color: $activeColor;
+
+        &:before {
+          background-image: url("../images/icons/arrow-active.svg");
+        }
+      }
+    }
+
+    .content {
+      flex-direction: row;
+      gap: 70px;
+    }
+
+    .buttons {
+      display: none;
+    }
+  }
+}
