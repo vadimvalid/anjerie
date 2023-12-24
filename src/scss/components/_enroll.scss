@@ -1,16 +1,16 @@
-.hero {
-  margin-bottom: 78px;
-  padding: 378px 0 58px;
+.enroll {
+  margin-bottom: 122px;
+  padding: 34px 0 58px;
   background-color: $black;
-  border-radius: 0px 0px 30px 30px;
+  border-radius: 30px;
   color: $white;
-  background-image: url("../images/bg-hero.png");
+  background-image: url("../images/bg-footer.png");
   background-size: contain;
-  background-position: right top;
+  background-position: right center;
   background-repeat: no-repeat;
 
   h1 {
-    margin-bottom: 4px;
+    margin-bottom: 50vw;
     font-size: 42px;
     line-height: normal;
     text-transform: uppercase;
@@ -36,12 +36,18 @@
   }
 
   @include sm-breakpoint {
-    padding: 110px 0 188px;
-    margin-bottom: 56px;
-    border-radius: 0px 0px 99px 99px;
+    padding: 200px 0 204px;
+    margin-bottom: 138px;
+    border-radius: 99px;
+    background-position: left center;
+
+    .wrapper {
+      display: flex;
+      flex-direction: row-reverse;
+    }
 
     .text {
-      width: 40%;
+      width: 50%;
     }
 
     h1 {
