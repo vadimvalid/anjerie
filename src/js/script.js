@@ -1,9 +1,10 @@
 function toggleBurger() {
   const burger = document.querySelector(".burger");
-  const menu = document.querySelector(".menu");
+  const header = document.querySelector(".header .wrapper");
 
   burger.addEventListener("click", () => {
     burger.classList.toggle("open");
+    header.classList.toggle("open");
   });
 }
 

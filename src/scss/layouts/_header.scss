@@ -31,6 +31,14 @@
         "burger logo basket"
         "nav nav nav"
         "info info info";
+
+      .nav {
+        display: block;
+      }
+
+      .info {
+        display: flex;
+      }
     }
   }
 }
